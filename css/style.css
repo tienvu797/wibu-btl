@@ -38,19 +38,37 @@
 .mySlides {display:none;}
 
 #imgcorousel{
-		background: #ddd;
+	background: #ddd;
     text-align: center;
     margin-bottom: 30px;
     padding: 20px 25px;
 }
 
+.input-group > .input-group-append > .btn{
+	border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 1px solid white;
+}
+#btn-search{
+	background: #ffc221;
+    margin-top: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    float: right;
+    margin-top: 45px;
 
+}
 
+.input-group>.form-control:not(:last-child) {
+	border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+	margin-top: 47px;
+}
 html {
 	scroll-behavior: smooth;
 }
 .search input[type=text] {
-    width: 95%;
+    width: 50%;
     height: 40px;
     padding: 0 15px;
     margin-top: 45px;
@@ -359,7 +377,12 @@ a.readmore_bt {
 	width: 75px;
 }
 
-
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    height: 50%;
+    margin-top: 93%;
+    background-color: black;
+}
 /*----------------------------
     preloader area
 ----------------------------*/
@@ -463,17 +486,25 @@ a.readmore_bt {
 	text-align: center;
 }
 
-
+.fa-shopping-cart:before {
+    content: "\f07a";
+    color: black;
+    font-size: 42px;
+}
 /*---------------------------------------------------------------------
     header area
 ---------------------------------------------------------------------*/
-
+#btn-card{
+	margin-top: 44px;
+    margin-left: 30px;
+}
 .logo_section {
 	text-align: center;
 }
 
 .logo {
 	float: left;
+	margin-top: 26px;
 }
 
 nav.main-menu {

@@ -59,12 +59,19 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="search">
-                                    <input type="text" placeholder="Search">
-                                    <button><i class="fa fa-search"></i></button>
+                                    <div class="input-group mb-3">
+                                      <input type="text" class="form-control" placeholder="Search">
+                                      <div class="input-group-append">
+                                        <button id="btn-search" class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
+                                      </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <li><button id="buy" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</button></li>
+                                <li><button id="buy" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Đăng nhập</button></li>
+                                <div id="btn-card" >
+                                    <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+                                </div>
                                 <div id="id01" class="modal">
                                     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
                                     <form class="modal-content" action="/action_page.php">
