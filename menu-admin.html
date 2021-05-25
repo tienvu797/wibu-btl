@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/admin-page.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="navbar-header">
+                     <a class="navbar-brand" href="#"><img src="images/logo.png" id="logo" width="300px" height="50px" alt="logo"/></a>
+                  </div>
+                  <div class="collapse navbar-collapse" id="myNavbar">
+                     <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up <span class="caret"></span></a>
+                           <ul class="dropdown-menu">
+                              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-2">
+               <div id="bg-control">
+                  <div id="menu">
+                     <ul role="tablist">
+                        <li><a class="nav-link active" href="#sanpham" data-toggle="tab">Quản lý sản phẩm</a></li>
+                        <li><a href="#taikhoan" data-toggle="tab">Quản lý thành viên</a></li>
+                        <li><a href="#" data-toggle="tab">Đăng xuất</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-10">
+               <div id="bg-content">
+                  <div class="tab-content">
+                     <div id="sanpham" class="container tab-pane active">
+                      <h1><strong>Quản lý sản phẩm</strong></h1>
+                        <table class="table table-striped">
+                           <button class="send"><a id="btnthem" href="them-sp.html">THÊM MỚI</a></button>
+                           <thead class="thead-dark">
+                              <tr>
+                                 <th>STT</th>
+                                 <th>ID</th>
+                                 <th>Tên</th>
+                                 <th>Sản phẩm </th>
+                                 <th>Giá </th>
+                                 <th>Số lượng</th>
+                                 <th>Chi tiết</th>
+                                 <th></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1</td>
+                                 <td>001</td>
+                                 <td>Norton Internet Security</td>
+                                 <td><img width="90" height="70" src="images/a.jpg" alt=""></td>
+                                 <td>$25.00</td>
+                                 <td>100</td>
+                                 <td>Năm xưa, Bao Thanh Thiên xử trảm Bàng Dục - con trai ruột của Bàng Thái Sư. Bàng Dục được Vua phong chức An Lạc Hầu và cử đến Huyện Trần Châu để cứu tế. Lúc bấy giờ, nạn lụt hoành hành và dân nghèo đói lầm than khắp nơi. Tuy nhiên, Bàng Dục ỷ quyền thế, tham ô vô độ, lấy hết ngân khố cứu trợ, xây cung điện cho mình hưởng thụ. </td>
+                                 <td><button class="btn btn-warning">Sửa</button></td>
+                                 <td><button class="btn btn-danger">Xóa</button></td>
+                              </tr>
+                              <tr>
+                                 <td>1</td>
+                                 <td>001</td>
+                                 <td>Norton Internet Security</td>
+                                 <td><img width="90" height="70" src="images/a.jpg" alt=""></td>
+                                 <td>$25.00</td>
+                                 <td>100</td>
+                                 <td>Năm xưa, Bao Thanh Thiên xử trảm Bàng Dục - con trai ruột của Bàng Thái Sư. Bàng Dục được Vua phong chức An Lạc Hầu và cử đến Huyện Trần Châu để cứu tế. Lúc bấy giờ, nạn lụt hoành hành và dân nghèo đói lầm than khắp nơi. Tuy nhiên, Bàng Dục ỷ quyền thế, tham ô vô độ, lấy hết ngân khố cứu trợ, xây cung điện cho mình hưởng thụ. </td>
+                                 <td><button class="btn btn-warning">Sửa</button></td>
+                                 <td><button class="btn btn-danger">Xóa</button></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                     <div id="taikhoan" class="container tab-pane fade">
+                      <h1><strong>Quản lý thành viên</strong></h1>                      
+                        <table class="table table-striped">
+                           <button class="send"><a id="btnthem" href="them-tk.html">THÊM MỚI</a></button>
+                           <thead class="thead-dark">
+                              <tr>
+                                 <th>STT</th>
+                                 <th>ID</th>
+                                 <th>Họ và tên</th>
+                                 <th>Tài khoản </th>
+                                 <th>Mật khẩu </th>
+                                 <th>Email</th>
+                                 <th></th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1</td>
+                                 <td>001</td>
+                                 <td>Phạm Khắc Wibu</td>
+                                 <td>wibu</td>
+                                 <td>123456</td>
+                                 <td>wibupk@gmail.com</td>
+                                 <td><button class="btn btn-warning">Sửa</button></td>
+                                 <td><button class="btn btn-danger">Xóa</button></td>
+                              </tr>
+                              <tr>
+                                 <td>1</td>
+                                 <td>001</td>
+                                 <td>Phạm Khắc Wibu</td>
+                                 <td>wibu</td>
+                                 <td>123456</td>
+                                 <td>wibupk@gmail.com</td>
+                                 <td><button class="btn btn-warning">Sửa</button></td>
+                                 <td><button class="btn btn-danger">Xóa</button></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

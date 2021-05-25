@@ -1,0 +1,88 @@
+body{
+	background-color: #EEEEEE;
+}
+#logo{
+	margin-top: -15px;
+	margin-left: 15px;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: white;
+    white-space: nowrap;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #333;
+}
+#menu{
+	margin-top: 0px;
+	padding: 0;
+}
+#menu ul{
+	background-color: white;
+	width: 100%;
+	padding: 0;
+	list-style-type: none;
+}
+#menu ul li{
+	width: auto;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #ffc221;
+	padding: 0 1em;
+	position: relative;
+}
+#menu ul li a{
+	text-decoration:none;
+	color: #ffc221;
+	font-weight: bold; 
+	display: block;
+}
+#menu ul li:hover{
+	background-color: #ffc221;
+}
+#menu ul li:hover a{
+	color: #333;
+}
+.send {
+    font-family: poppins;
+    max-width: 212px;
+    margin: 0;
+    margin-bottom: 40px;
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 12px 0px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.send:hover {
+     background: #ffc221;
+}
+#bg-content{
+	background-color: whitesmoke;
+	box-shadow: 1px 2px 2px #AAA;
+}
+.send{
+	margin-top: 80px;
+}
+#bg-control{
+	min-height: 700px;
+	background-color: white;
+    padding: 10px;
+    box-shadow: 1px 2px 2px #AAA;
+}
+tbody tr td {
+	max-width: 350px;
+}
+#btnthem{
+	color: white;
+	text-decoration:none;
+}
