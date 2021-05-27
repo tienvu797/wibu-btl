@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <!-- basic -->
         <meta charset="utf-8">
@@ -24,7 +25,8 @@
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
         <!-- Tweaks for older IEs-->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+            media="screen">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -38,12 +40,13 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
     </head>
     <!-- body -->
+
     <body class="main-layout product_page">
         <!-- loader  -->
         <div class="loader_bg">
             <div class="loader"><img src="images/loading.gif" alt="#" /></div>
         </div>
-        <!-- end loader --> 
+        <!-- end loader -->
         <header>
             <!-- header inner -->
             <div class="header sticky-top">
@@ -53,27 +56,31 @@
                             <div class="col-md-3 logo_section">
                                 <div class="full">
                                     <div class="center-desk">
-                                        <div class="logo"> <a href="index2.html"><img src="images/logo.png" alt="logo"/></a> </div>
+                                        <div class="logo"> <a href="index2.html"><img src="images/logo.png"
+                                                    alt="logo" /></a> </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="search">
                                     <div class="input-group mb-3">
-                                      <input type="text" class="form-control" placeholder="Search">
-                                      <div class="input-group-append">
-                                        <button id="btn-search" class="btn btn-success" type="submit"><i class="fa fa-search"></i></button>
-                                      </div>
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <div class="input-group-append">
+                                            <button id="btn-search" class="btn btn-success" type="submit"><i
+                                                    class="fa fa-search"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
-                                <li><button id="buy" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Đăng nhập</button></li>
-                                <div id="btn-card" >
+                                <li><button id="buy" onclick="document.getElementById('id01').style.display='block'"
+                                        style="width:auto;">Đăng nhập</button></li>
+                                <div id="btn-card">
                                     <a href="cart.html"><i class="fa fa-shopping-cart"></i></a>
                                 </div>
                                 <div id="id01" class="modal">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                                        title="Close Modal">&times;</span>
                                     <form class="modal-content" action="/action_page.php">
                                         <div class="container">
                                             <h1>Đăng nhập</h1>
@@ -84,8 +91,10 @@
                                             <label for="psw"><b>Mật khẩu</b></label>
                                             <input type="password" placeholder="Enter Password" name="psw" required>
                                             <div class="clearfix">
-                                                <button id="btnlog"  type="submit" class="signupbtn">Đăng nhập</button>
-                                                <button id="btnlog" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Thoát</button>            
+                                                <button id="btnlog" type="submit" class="signupbtn">Đăng nhập</button>
+                                                <button id="btnlog" type="button"
+                                                    onclick="document.getElementById('id01').style.display='none'"
+                                                    class="cancelbtn">Thoát</button>
                                             </div>
                                         </div>
                                     </form>
@@ -93,14 +102,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container" >
+                    <div class="container">
                         <div class="header">
                             <div class="col-xl-7 col-lg-7 col-md-9 col-sm-9 center">
                                 <div class="menu-area">
                                     <div class="limit-box">
                                         <nav class="main-menu">
                                             <ul class="menu-area-main">
-                                                <li > <a href="index2.html">Trang chủ</a> </li>
+                                                <li> <a href="index2.html">Trang chủ</a> </li>
                                                 <li> <a href="blog.html">Bài viết</a> </li>
                                                 <li class="active"> <a href="product.html">Sản phẩm </a></li>
                                                 <li> <a href="about.html">Giới thiệu</a> </li>
@@ -114,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end header inner --> 
+            <!-- end header inner -->
         </header>
         <div class="brand_color">
             <div class="container">
@@ -143,9 +152,12 @@
                 <div class="col-md-6">
                     <div class="image-item">
                         <div class="image-center">
-                            <button class="w3-button demo" onclick="currentDiv(1)"><img src="images/a.jpg" style="width:60px;height:60px;"></button> 
-                            <button class="w3-button demo" onclick="currentDiv(2)"><img src="images/b.jpg" style="width:60px;height:60px;"></button> 
-                            <button class="w3-button demo" onclick="currentDiv(3)"><img src="images/c.jpg" style="width:60px;height:60px;"></button> 
+                            <button class="w3-button demo" onclick="currentDiv(1)"><img src="images/a.jpg"
+                                    style="width:60px;height:60px;"></button>
+                            <button class="w3-button demo" onclick="currentDiv(2)"><img src="images/b.jpg"
+                                    style="width:60px;height:60px;"></button>
+                            <button class="w3-button demo" onclick="currentDiv(3)"><img src="images/c.jpg"
+                                    style="width:60px;height:60px;"></button>
                         </div>
                         <div class="image-content" style="max-width:800px">
                             <img class="mySlides" src="images/a.jpg" style="width:60%">
@@ -156,29 +168,29 @@
                     <script>
                         var slideIndex = 1;
                         showDivs(slideIndex);
-                        
+
                         function plusDivs(n) {
-                          showDivs(slideIndex += n);
+                            showDivs(slideIndex += n);
                         }
-                        
+
                         function currentDiv(n) {
-                          showDivs(slideIndex = n);
+                            showDivs(slideIndex = n);
                         }
-                        
+
                         function showDivs(n) {
-                          var i;
-                          var x = document.getElementsByClassName("mySlides");
-                          var dots = document.getElementsByClassName("demo");
-                          if (n > x.length) {slideIndex = 1}    
-                          if (n < 1) {slideIndex = x.length}
-                          for (i = 0; i < x.length; i++) {
-                            x[i].style.display = "none";  
-                          }
-                          for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" w3-red", "");
-                          }
-                          x[slideIndex-1].style.display = "block";  
-                          dots[slideIndex-1].className += " w3-red";
+                            var i;
+                            var x = document.getElementsByClassName("mySlides");
+                            var dots = document.getElementsByClassName("demo");
+                            if (n > x.length) { slideIndex = 1 }
+                            if (n < 1) { slideIndex = x.length }
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";
+                            }
+                            for (i = 0; i < dots.length; i++) {
+                                dots[i].className = dots[i].className.replace(" w3-red", "");
+                            }
+                            x[slideIndex - 1].style.display = "block";
+                            dots[slideIndex - 1].className += " w3-red";
                         }
                     </script>
                 </div>
@@ -187,7 +199,11 @@
                         <h2>Casio MTP-1374L-1AVDF Nam Quartz</h2>
                         <h3><ins>1.618.000VNĐ &ensp;</ins><del>1.904.000VNĐ</del></h3>
                         <div class="describe">
-                            <p>Sản phẩm đồng hồ Casio MTP-1374D-1AVDF được thiết kế với phong cách hiện đại, trẻ trung và mạnh mẽ. Sản phẩm đồng hồ nam Casio này có sự kết hợp giữa màu sáng bạc với mặt nền màu đen tạo ra sự tương phản hiện đại. Với sự kết hợp như vậy, sản phẩm phù hợp với người dùng yêu thích phong cách năng động và nam tính, đặc biệt rất phù hợp cho nam giới trẻ trung hiện đại.</p>
+                            <p>Sản phẩm đồng hồ Casio MTP-1374D-1AVDF được thiết kế với phong cách hiện đại, trẻ trung
+                                và mạnh mẽ. Sản phẩm đồng hồ nam Casio này có sự kết hợp giữa màu sáng bạc với mặt nền
+                                màu đen tạo ra sự tương phản hiện đại. Với sự kết hợp như vậy, sản phẩm phù hợp với
+                                người dùng yêu thích phong cách năng động và nam tính, đặc biệt rất phù hợp cho nam giới
+                                trẻ trung hiện đại.</p>
                         </div>
                         <div class=" col-md-12">
                             <button class="send">MUA NGAY</button>
@@ -217,12 +233,29 @@
                             <div id="info" class="container tab-pane active">
                                 <br>
                                 <h3>Thông tin </h3>
-                                <p>Bề mặt đồng hồ khá ấn tượng với kích thước lớn. Bề mặt này có gam màu chủ đạo là màu đen tạo ra đặc tính mạnh mẽ cho những sản phẩm mang màu sắc như vậy. Với các tính mạnh mẽ này, sản phẩm phù hợp cho nam giới thể hiện phong cách của bản thân.<br>Trên bề mặt này các chi tiết như kim đồng hồ, mốc thời gian được thể hiện bằng gam màu trắng khá nổi bật trên nền mặt màu đen. Hầu hết các chi tiết ở vạch mốc thời gian đều không được hiển thị số trừ vị trí số 12 là con số rõ ràng giúp người dùng phân biệt được vị trí giữa điểm đầu và điểm cuối. Trên mặt nền này còn có các đồng hồ phụ được bố trí ở vị trí 3, 6, 9 giờ đặt sát cạnh nhau. Các đồng hồ phụ này mang lại các tính năng thú vị cho sản phẩm.</p>
+                                <p>Bề mặt đồng hồ khá ấn tượng với kích thước lớn. Bề mặt này có gam màu chủ đạo là màu
+                                    đen tạo ra đặc tính mạnh mẽ cho những sản phẩm mang màu sắc như vậy. Với các tính
+                                    mạnh mẽ này, sản phẩm phù hợp cho nam giới thể hiện phong cách của bản thân.<br>Trên
+                                    bề mặt này các chi tiết như kim đồng hồ, mốc thời gian được thể hiện bằng gam màu
+                                    trắng khá nổi bật trên nền mặt màu đen. Hầu hết các chi tiết ở vạch mốc thời gian
+                                    đều không được hiển thị số trừ vị trí số 12 là con số rõ ràng giúp người dùng phân
+                                    biệt được vị trí giữa điểm đầu và điểm cuối. Trên mặt nền này còn có các đồng hồ phụ
+                                    được bố trí ở vị trí 3, 6, 9 giờ đặt sát cạnh nhau. Các đồng hồ phụ này mang lại các
+                                    tính năng thú vị cho sản phẩm.</p>
                             </div>
                             <div id="mota" class="container tab-pane fade">
                                 <br>
                                 <h3>Mô tả</h3>
-                                <p>Sản phẩm đồng hồ Casio MTP-1374D-1AVDF được đánh giá là sản phẩm cực kỳ chất lượng. Sản phẩm này được trang bị nhiều tính năng khác nhau. Nhờ vậy mà người dùng có những giây phút trải nghiệm vô cùng thú vị. Các tính năng của sản phẩm này bao gồm:<br>Tính năng chỉ 24 giờ: Với tính năng này, người dùng có thể biết được giờ ban ngày và giờ ban đêm. Nhờ vậy mà có những lựa chọn sinh hoạt phù hợp.<br>Tính năng chỉ thứ và ngày trong tuần, tháng: Tính năng này cho phép người dùng nhận biết được thời điểm hiện tại ra sao? Từ đó có những sắp xếp lịch công việc phù hợp.<br>Tính năng chống thấm nước của sản phẩm đồng hồ Casio chính hãng này rất tốt. Người dùng có thể sử dụng ở môi trường nước sâu 50m mà vẫn có thể hoạt động bình thường, không lo bị hỏng.</p>
+                                <p>Sản phẩm đồng hồ Casio MTP-1374D-1AVDF được đánh giá là sản phẩm cực kỳ chất lượng.
+                                    Sản phẩm này được trang bị nhiều tính năng khác nhau. Nhờ vậy mà người dùng có những
+                                    giây phút trải nghiệm vô cùng thú vị. Các tính năng của sản phẩm này bao
+                                    gồm:<br>Tính năng chỉ 24 giờ: Với tính năng này, người dùng có thể biết được giờ ban
+                                    ngày và giờ ban đêm. Nhờ vậy mà có những lựa chọn sinh hoạt phù hợp.<br>Tính năng
+                                    chỉ thứ và ngày trong tuần, tháng: Tính năng này cho phép người dùng nhận biết được
+                                    thời điểm hiện tại ra sao? Từ đó có những sắp xếp lịch công việc phù hợp.<br>Tính
+                                    năng chống thấm nước của sản phẩm đồng hồ Casio chính hãng này rất tốt. Người dùng
+                                    có thể sử dụng ở môi trường nước sâu 50m mà vẫn có thể hoạt động bình thường, không
+                                    lo bị hỏng.</p>
                             </div>
                             <div id="danhgia" class="container tab-pane fade">
                                 <br>
@@ -250,13 +283,14 @@
                         <div class="container-fluid">
                             <div id="carousel-example" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                                    <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12 active"  id="imgcorousel" >
+                                    <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12 active"
+                                        id="imgcorousel">
                                         <img src="images/a.jpg" class="img-fluid mx-auto d-block" alt="img1">
                                         <h3>Norton Internet Security</h3>
                                         <span>$25.00</span>
                                     </div>
                                     <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12" id="imgcorousel">
-                                        <img  src="images/b.jpg" class="img-fluid mx-auto d-block" alt="img2">
+                                        <img src="images/b.jpg" class="img-fluid mx-auto d-block" alt="img2">
                                         <h3>Norton Internet Security</h3>
                                         <span>$25.00</span>
                                     </div>
@@ -271,17 +305,17 @@
                                         <span>$25.00</span>
                                     </div>
                                     <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12" id="imgcorousel">
-                                        <img  src="images/e.jpg" class="img-fluid mx-auto d-block" alt="img5">
+                                        <img src="images/e.jpg" class="img-fluid mx-auto d-block" alt="img5">
                                         <h3>Norton Internet Security</h3>
                                         <span>$25.00</span>
                                     </div>
                                     <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12" id="imgcorousel">
-                                        <img  src="images/a.jpg" class="img-fluid mx-auto d-block" alt="img6">
+                                        <img src="images/a.jpg" class="img-fluid mx-auto d-block" alt="img6">
                                         <h3>Norton Internet Security</h3>
                                         <span>$25.00</span>
                                     </div>
                                     <div class="carousel-item col-xl-3 col-lg-3 col-md-6 col-sm-12" id="imgcorousel">
-                                        <img  src="images/b.jpg" class="img-fluid mx-auto d-block" alt="img7">
+                                        <img src="images/b.jpg" class="img-fluid mx-auto d-block" alt="img7">
                                         <h3>Norton Internet Security</h3>
                                         <span>$25.00</span>
                                     </div>
@@ -291,45 +325,47 @@
                                         <span>$25.00</span>
                                     </div>
                                 </div>
-                                <a class="carousel-control-prev" href="#carousel-example" role="button" color="black" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
+                                <a class="carousel-control-prev" href="#carousel-example" role="button" color="black"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
                                 </a>
-                                <a class="carousel-control-next" href="#carousel-example" role="button" color="black" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
+                                <a class="carousel-control-next" href="#carousel-example" role="button" color="black"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <script>
                         $('#carousel-example').on('slide.bs.carousel', function (e) {
-                          /*
-                              CC 2.0 License Iatek LLC 2018 - Attribution required
-                          */
-                          var $e = $(e.relatedTarget);
-                          var idx = $e.index();
-                          var itemsPerSlide = 5;
-                          var totalItems = $('.carousel-item').length;
-                        
-                          if (idx >= totalItems-(itemsPerSlide-1)) {
-                              var it = itemsPerSlide - (totalItems - idx);
-                              for (var i=0; i<it; i++) {
-                                  // append slides to end
-                                  if (e.direction=="left") {
-                                      $('.carousel-item').eq(i).appendTo('.carousel-inner');
-                                  }
-                                  else {
-                                      $('.carousel-item').eq(0).appendTo('.carousel-inner');
-                                  }
-                              }
-                          }
+                            /*
+                                CC 2.0 License Iatek LLC 2018 - Attribution required
+                            */
+                            var $e = $(e.relatedTarget);
+                            var idx = $e.index();
+                            var itemsPerSlide = 5;
+                            var totalItems = $('.carousel-item').length;
+
+                            if (idx >= totalItems - (itemsPerSlide - 1)) {
+                                var it = itemsPerSlide - (totalItems - idx);
+                                for (var i = 0; i < it; i++) {
+                                    // append slides to end
+                                    if (e.direction == "left") {
+                                        $('.carousel-item').eq(i).appendTo('.carousel-inner');
+                                    }
+                                    else {
+                                        $('.carousel-item').eq(0).appendTo('.carousel-inner');
+                                    }
+                                }
+                            }
                         });
                     </script>
                 </div>
             </div>
         </div>
-        <!--  footer --> 
+        <!--  footer -->
         <footr>
             <div class="footer">
                 <div class="container">
@@ -348,8 +384,8 @@
                             <div class="contact">
                                 <h3>conatct us</h3>
                                 <span>123 Second Street Fifth Avenue,<br>
-                                Manhattan, New York
-                                +987 654 3210</span>
+                                    Manhattan, New York
+                                    +987 654 3210</span>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -368,21 +404,21 @@
                             <div class="contact">
                                 <h3>service</h3>
                                 <ul class="lik">
-                                <li> <a href="#"> Data recovery</a></li>
-                                <li> <a href="#">Computer repair</a></li>
-                                <li> <a href="#">Mobile service</a></li>
-                                <li> <a href="#">Network solutions</a></li>
-                                <li> <a href="#">Technical support</a></li>
+                                    <li> <a href="#"> Data recovery</a></li>
+                                    <li> <a href="#">Computer repair</a></li>
+                                    <li> <a href="#">Mobile service</a></li>
+                                    <li> <a href="#">Network solutions</a></li>
+                                    <li> <a href="#">Technical support</a></li>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="contact">
                                 <h3>IT NEXT THEME</h3>
                                 <span>Tincidunt elit magnis <br>
-                                nulla facilisis. Dolor <br>
-                                sagittis maecenas. <br>
-                                Sapien nunc amet <br>
-                                ultrices, </span>
+                                    nulla facilisis. Dolor <br>
+                                    sagittis maecenas. <br>
+                                    Sapien nunc amet <br>
+                                    ultrices, </span>
                             </div>
                         </div>
                     </div>
@@ -390,32 +426,33 @@
             </div>
         </footr>
         <!-- end footer -->
-        <!-- Javascript files--> 
-        <script src="js/jquery.min.js"></script> 
-        <script src="js/popper.min.js"></script> 
-        <script src="js/bootstrap.bundle.min.js"></script> 
-        <script src="js/jquery-3.0.0.min.js"></script> 
-        <script src="js/plugin.js"></script> 
-        <!-- sidebar --> 
-        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+        <!-- Javascript files-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/plugin.js"></script>
+        <!-- sidebar -->
+        <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="js/custom.js"></script>
         <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
         <script>
-            $(document).ready(function(){
-            $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
+            $(document).ready(function () {
+                $(".fancybox").fancybox({
+                    openEffect: "none",
+                    closeEffect: "none"
+                });
+
+                $(".zoom").hover(function () {
+
+                    $(this).addClass('transition');
+                }, function () {
+
+                    $(this).removeClass('transition');
+                });
             });
-            
-            $(".zoom").hover(function(){
-            
-            $(this).addClass('transition');
-            }, function(){
-            
-            $(this).removeClass('transition');
-            });
-            });
-            
-        </script> 
+
+        </script>
     </body>
+
 </html>
