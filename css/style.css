@@ -58,6 +58,34 @@
     margin-top: 45px;
 
 }
+.product-box{
+	position: relative;
+}
+.product-box .add-action .add-action-link{
+	display: none;
+}
+.product-box:hover .add-action .add-action-link {
+	display: block;
+}
+.product-box .add-action .add-action-link li{
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+}
+.product-box .add-action .add-action-link li >a{
+	color: #242424;
+	font-weight: bold;
+}
+.add-action-buy, .add-action-detail{
+	margin-left: 7px;
+	margin-right: 7px;
+}
+.product-box .add-action .add-action-link li >a:hover{
+	color: white;
+	font-weight: bold;
+	font-size: 23px;
+}
+
 
 .input-group>.form-control:not(:last-child) {
 	border-top-right-radius: 0;
@@ -1958,6 +1986,7 @@ margin-top: 40px;
     position: relative;
     padding-bottom: 8px;
 }
+
 
 .product .title h2:after {
 	position: absolute;
