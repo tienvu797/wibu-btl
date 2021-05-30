@@ -130,6 +130,9 @@
     border: 10px solid transparent;
     padding: 15px;
 }
+#imgcorousel:hover{
+    padding: 20px;
+}
 .carousel-control-next-icon, .carousel-control-prev-icon {
     display: inline-block;
     height: 60px;
