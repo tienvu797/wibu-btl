@@ -71,6 +71,8 @@ usort($list_item, function ($a, $b) {
 usort($list_user, function ($a, $b) {
    return $a['permission'] < $b['permission'];
 });
+$buy = $db->table('deal')->get(['id_customer' => $_SESSION['id']]);
+$sell = $db->table('deal')->get(['id_seller' => $_SESSION['id']]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,6 +104,8 @@ usort($list_user, function ($a, $b) {
                         echo ('style="display: none;"') ?> href="#account" data-toggle="tab">
                      Quản lý thành viên
                   </a>
+                  <a href="#buy" data-toggle="tab">Lịch sử mua hàng</a>
+                  <a href="#sell" data-toggle="tab">Lịch sử bán hàng</a>
                   <a href="login.php">Đăng xuất</a>
                </nav>
             </div>
@@ -394,6 +398,62 @@ usort($list_user, function ($a, $b) {
                                        </div>
                                     </form>
                                  </td>
+                              </tr>
+                           <?php endfor ?>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div id="buy" class="container tab-pane fade">
+                     <h1 style="margin-bottom: 135px;"><strong>Lịch sử mua hàng</strong></h1>
+                     <table class="table table-striped">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>STT</th>
+                              <th>Tên</th>
+                              <th>Hình ảnh</th>
+                              <th>Số lượng</th>
+                              <th>Thanh toán</th>
+                              <th>Thời gian giao dịch</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <?php
+                           for ($i = 0; $i < count($buy); $i++) : ?>
+                              <tr>
+                                 <td><?php echo $i + 1 ?></td>
+                                 <td><?php echo $buy[$i]['name'] ?></td>
+                                 <td><img width="100px" src="<?php echo $buy[$i]['img'] ?>"></td>
+                                 <td><?php echo $buy[$i]['amount'] ?></td>
+                                 <td class="currency"><?php echo $buy[$i]['price'] ?></td>
+                                 <td><?php echo $buy[$i]['time'] ?></td>
+                              </tr>
+                           <?php endfor ?>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div id="sell" class="container tab-pane fade">
+                     <h1 style="margin-bottom: 135px;"><strong>Lịch sử bán hàng</strong></h1>
+                     <table class="table table-striped">
+                        <thead class="thead-light">
+                           <tr>
+                              <th>STT</th>
+                              <th>Tên</th>
+                              <th>Hình ảnh</th>
+                              <th>Số lượng</th>
+                              <th>Thanh toán</th>
+                              <th>Thời gian giao dịch</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <?php
+                           for ($i = 0; $i < count($sell); $i++) : ?>
+                              <tr>
+                                 <td><?php echo $i + 1 ?></td>
+                                 <td><?php echo $sell[$i]['name'] ?></td>
+                                 <td><img width="100px" src="<?php echo $sell[$i]['img'] ?>"></td>
+                                 <td><?php echo $sell[$i]['amount'] ?></td>
+                                 <td class="currency"><?php echo $sell[$i]['price'] ?></td>
+                                 <td><?php echo $sell[$i]['time'] ?></td>
                               </tr>
                            <?php endfor ?>
                         </tbody>

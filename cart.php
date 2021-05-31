@@ -1,4 +1,59 @@
-<?php require('permission.php') ?>
+<?php
+date_default_timezone_set("Asia/Ho_Chi_Minh");
+require('permission.php');
+require_once('database.php');
+$config = [
+    'host' => 'localhost',
+    'user' => 'root',
+    'pass' => '',
+    'dbname' => 'btl'
+];
+$db = new Database($config);
+if (!empty($_POST)) {
+    if (!empty($_POST['id'])) {
+        if ($_POST['cart'] == 'continue')
+            for ($i = 0; $i < count($_POST['id']); $i++)
+                $db->table('cart')->update($_POST['id'][$i], ['amount' => $_POST['amount'][$i]]);
+        if ($_POST['cart'] == 'ok') {
+            for ($i = 0; $i < count($_POST['id']); $i++)
+                if ($_POST['amount'] != 0) {
+                    $data = [
+                        'id_customer' => $_SESSION['id'],
+                        'amount' => $_POST['amount'][$i],
+                        'price' => $_POST['output'][$i],
+                        'time' => date('Y-m-d H:i:s'),
+                    ];
+
+                    $res = $db->table('cart')->get(['id' => $_POST['id'][$i]]);
+                    $data['id_product'] = $res[0]['id_product'];
+
+                    $res = $db->table('product')->get(['id' => $data['id_product']]);
+                    $data['id_seller'] = $res[0]['id_user'];
+
+                    $db->table('history')->insert($data);
+                    $db->table('cart')->delete($_POST['id'][$i]);
+                }
+        }
+    }
+    header('location:index.php');
+}
+if (!empty($_GET)) {
+    $id = $_GET['id'];
+    $item = $db->table('product')->get(['id' => $id])[0];
+    $data = [
+        'id_customer' => $_SESSION['id'],
+        'id_product' => $id
+    ];
+    $check = $db->table('cart')->get($data);
+    if (count($check) == 0) {
+        $db->table('cart')->insert($data);
+    } else {
+        $data['amount'] = $check[0]['amount'] + 1;
+        $db->table('cart')->update($check[0]['id'], $data);
+    }
+}
+$res = $db->table('show_cart')->get(['id_customer' => $_SESSION['id']]);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -94,80 +149,62 @@
     <div class="product-bg">
         <div class="product-bg-white">
             <div class="container-fluid">
-                <table class="table table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th>#</th>
-                            <th>Sản phẩm </th>
-                            <th>Tên</th>
-                            <th>Giá </th>
-                            <th>Số lượng</th>
-                            <th>Tổng</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td><img width="90" height="70" src="images/a.jpg" alt=""></td>
-                            <td>Norton Internet Security</td>
-                            <td>$25.00</td>
-                            <td>
-                                <div class="quantity buttons_added">
-                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                </div>
-                            </td>
-                            <th>$25.00</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><img width="90" height="70" src="images/c.jpg" alt=""></td>
-                            <td>Norton Internet Security</td>
-                            <td>$25.00</td>
-                            <td>
-                                <div class="quantity buttons_added">
-                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                </div>
-                            </td>
-                            <th>$25.00</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><img width="90" height="70" src="images/b.jpg" alt=""></td>
-                            <td>Norton Internet Security</td>
-                            <td>$25.00</td>
-                            <td>
-                                <div class="quantity buttons_added">
-                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                </div>
-                            </td>
-                            <th>$25.00</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td><img width="90" height="70" src="images/e.jpg" alt=""></td>
-                            <td>Norton Internet Security</td>
-                            <td>$25.00</td>
-                            <td>
-                                <div class="quantity buttons_added">
-                                    <input type="number" size="4" class="input-text qty text" title="Qty" value="1" min="0" step="1">
-                                </div>
-                            </td>
-                            <th>$25.00</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>
-                                <div class=" col-md-12" id="btnCart">
-                                    <button class="send">Thanh toán</button>
-                                </div>
-                            </td>
-                            <th>$100.00</th>
-                        </tr>
-                    </tbody>
-                </table>
+                <form action="" method="post">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Sản phẩm</th>
+                                <th>Tên</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Tạm tính</th>
+                                <th>Giảm giá</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php for ($i = 0; $i < count($res); $i++) : ?>
+                                <input type="text" name="id[]" value="<?php echo $res[$i]['id'] ?>" style="display: none;">
+                                <tr>
+                                    <td><?php echo $i + 1 ?></td>
+                                    <td><img width="100px" src="<?php echo $res[$i]['img'] ?>" alt=""></td>
+                                    <td><?php echo $res[$i]['name'] ?></td>
+                                    <td class="currency price"><?php echo $res[$i]['price'] ?></td>
+                                    <td>
+                                        <div class="quantity buttons_added">
+                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="<?php echo $res[$i]['amount'] ?>" min="0" onchange="changeData(this,<?php echo $i ?>)" name="amount[]">
+                                        </div>
+                                    </td>
+                                    <th class="currency temp"></th>
+                                    <td class="discount"><?php echo $res[$i]['discount'] ?> %</td>
+                                    <th class="currency final"></th>
+                                    <input type="text" name="output[]" style="display: none;" class="output">
+                                </tr>
+                            <?php endfor ?>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <button type="submit" name="cart" value="continue" class="send text-dark" style="background-color: #ccc;">
+                                        Tiếp tục mua hàng
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="submit" name="cart" value="ok" class="send">
+                                        Thanh toán
+                                    </button>
+                                </td>
+                                <td></td>
+                                <th class="currency" id="sum"></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
             </div>
         </div>
     </div>
@@ -199,5 +236,6 @@
         });
     </script>
 </body>
+<script src="./main.js"></script>
 
 </html>

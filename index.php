@@ -276,5 +276,4 @@ $sale = $db->table('sale')->search();
     </script>
 </body>
 <script src="./main.js"></script>
-
 </html>

@@ -117,7 +117,10 @@ $random = $db->table('random')->search();
                         <p><?php echo $item['detail'] ?></p>
                     </div>
                     <div class=" col-md-12">
-                        <button class="send">MUA NGAY</button>
+                        <form method="get" action="cart.php">
+                            <button class="send" name="id" value="<?php echo $item['id'] ?>" type="submit">
+                                MUA NGAY</button>
+                        </form>
                     </div>
                 </div>
             </div>
