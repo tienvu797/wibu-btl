@@ -10,6 +10,7 @@ function revert(param) {
 }
 function changeData(element, i) {
   let valPrice = revert(price[i].innerHTML)
+  console.log(i);
   let valAmount = element.value
   let valDiscount = parseInt(discount[i].innerHTML)
 
@@ -26,8 +27,12 @@ function changeData(element, i) {
   calSum()
 }
 function calSum() {
-  let valSum = Array.from(final).reduce(
-    (ele1, ele2) => revert(ele1.innerHTML) + revert(ele2.innerHTML))
+  let valSum = 0;
+  Array.from(final).forEach(element => {
+    valSum+=revert(element.innerHTML)
+  });
+  // let valSum = Array.from(final).reduce(
+  //   (ele1, ele2) => revert(ele1.innerHTML) + revert(ele2.innerHTML))
   valSum = format(valSum) ? format(valSum) : '0 VNĐ'
   sum.innerHTML = valSum
 }

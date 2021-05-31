@@ -13,10 +13,12 @@ if (!empty($_POST)) {
     if (!empty($_POST['id'])) {
         if ($_POST['cart'] == 'continue')
             for ($i = 0; $i < count($_POST['id']); $i++)
-                $db->table('cart')->update($_POST['id'][$i], ['amount' => $_POST['amount'][$i]]);
+                if ($_POST['amount'][$i] != 0)
+                    $db->table('cart')->update($_POST['id'][$i], ['amount' => $_POST['amount'][$i]]);
+                else $db->table('cart')->delete($_POST['id'][$i]);
         if ($_POST['cart'] == 'ok') {
             for ($i = 0; $i < count($_POST['id']); $i++)
-                if ($_POST['amount'] != 0) {
+                if ($_POST['amount'][$i] != 0) {
                     $data = [
                         'id_customer' => $_SESSION['id'],
                         'amount' => $_POST['amount'][$i],
@@ -32,7 +34,7 @@ if (!empty($_POST)) {
 
                     $db->table('history')->insert($data);
                     $db->table('cart')->delete($_POST['id'][$i]);
-                }
+                } else $db->table('cart')->delete($_POST['id'][$i]);
         }
     }
     header('location:index.php');
