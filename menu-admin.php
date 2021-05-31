@@ -51,7 +51,7 @@ if (!empty($_POST['product'])) {
             move_uploaded_file($img, $path);
 
             $data['img'] = $path;
-            $data['id_user'] = $_SESSION['id_user'];
+            $data['id_user'] = $_SESSION['id'];
             $db->table('product')->insert($data);
             break;
          case 'edit':
@@ -63,7 +63,7 @@ if (!empty($_POST['product'])) {
 }
 if ($_SESSION['permission'] == 2)
    $list_item = $db->table('list_item')->search();
-else $list_item = $db->table('list_item')->get(['id_user' => $_SESSION['id_user']]);
+else $list_item = $db->table('list_item')->get(['id_user' => $_SESSION['id']]);
 $list_user = $db->table('account')->search();
 usort($list_item, function ($a, $b) {
    return $a['id'] > $b['id'];
@@ -95,7 +95,7 @@ usort($list_user, function ($a, $b) {
          <div class="col-md-2">
             <div id="bg-control">
                <nav id="menu" class="nav nav-tabs nav-justified">
-                  <a class="text-uppercase"><?php echo $list_item[0]['full_name'] ?></a>
+                  <a class="text-uppercase"><?php echo $_SESSION['name'] ?></a>
                   <a href="index.php">Trang chủ</a>
                   <a href="#product" data-toggle="tab">Quản lý sản phẩm</a>
                   <a <?php if ($_SESSION['permission'] != 2)
